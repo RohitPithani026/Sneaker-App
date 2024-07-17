@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, prefer_interpolation_to_compose_strings
 
 import 'package:ecommerce/models/cart.dart';
 import 'package:ecommerce/models/shoe.dart';
@@ -30,7 +30,7 @@ class _CartItemState extends State<CartItem> {
       child: ListTile(
         leading: Image.asset(widget.shoe.imagePath),
         title: Text(widget.shoe.name),
-        subtitle: Text(widget.shoe.price),
+        subtitle: Text('\$' + widget.shoe.price),
         trailing: IconButton(
           icon: const Icon(Icons.delete),
           onPressed: removeItemFromCart,
